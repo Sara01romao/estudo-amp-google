@@ -111,17 +111,39 @@
   
     <div class="main-content container">
         <h2>Carousel</h2>
-      <!-- carousel content -->
-      <amp-base-carousel loop="true"  width="300" height="400" layout="responsive">
-        <amp-img src="https://source.unsplash.com/Ji_G7Bu1MoM/600x400" width="200" height="400" ></amp-img>
-        <amp-img src="https://source.unsplash.com/4yCXNMLP9g8/600x400" width="200" height="400" layout="responsive"></amp-img>
-        <amp-img src="https://source.unsplash.com/QrgRXH81DXk/600x400" width="200" height="400" layout="responsive"></amp-img>
-        <amp-img src="https://source.unsplash.com/8QJSi37vhms/600x400" width="200" height="400" layout="responsive"></amp-img>
-    </amp-base-carousel>
-
-
+        <!-- carousel content -->
+        <amp-base-carousel loop="true"  width="300" height="400" layout="responsive">
+            <amp-img src="https://source.unsplash.com/Ji_G7Bu1MoM/600x400" width="200" height="400" ></amp-img>
+            <amp-img src="https://source.unsplash.com/4yCXNMLP9g8/600x400" width="200" height="400" layout="responsive"></amp-img>
+            <amp-img src="https://source.unsplash.com/QrgRXH81DXk/600x400" width="200" height="400" layout="responsive"></amp-img>
+            <amp-img src="https://source.unsplash.com/8QJSi37vhms/600x400" width="200" height="400" layout="responsive"></amp-img>
+        </amp-base-carousel>
 
     </div>
+
+
+    <div class="container">
+        <!-- Form content -->
+        <h2 class="main-heading">Form</h2>
+        <div class="subscribe-card-container">
+            <div class="subscribe-card">
+                <form method="post" action-xhr="/submit-form" target="_top" class="main-form">
+                    <div class="input">
+                        <label for="form-name">Name:</label><br>
+                        <input type="text" name="name" id="form-name" required>
+                        
+                    </div>
+                    <div class="input">
+                        <label for="form-email">Email:</label><br>
+                        <input type="email" name="email" id="form-email" required>
+                       
+                    </div>
+                    <input type="submit" value="Subscribe" class="btn">
+                </form>
+            </div>
+        </div>
+        
+      </div>
 
 
  
@@ -130,6 +152,37 @@
 
     
     <style amp-custom>
+
+.subscribe-card-container{
+        max-width:500px;
+        padding:30px;
+        margin:0 auto;
+        
+      
+      }
+      
+      .subscribe-card-container form{
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        gap:20px;
+        padding:20px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      }
+
+      .btn{
+        height:30px;
+      }
+      
+      .input input{
+        max-width:100%;
+        width:100%;
+        height:30px;
+      }
+      
+      .subscribe-card-container form input{
+        max-width:100%;
+      }
       
       .container {
         max-width:800px;
